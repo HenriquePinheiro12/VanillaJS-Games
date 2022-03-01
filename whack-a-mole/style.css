@@ -8,6 +8,11 @@
     color: #fff
 }
 
+a{
+    color: unset;
+    text-decoration: none
+}
+
 main{
     min-height: 100vh;
     display: flex;
@@ -39,11 +44,15 @@ h1{
     border-radius: 10px;
 }
 
+.square, .container{
+    box-shadow: 0 0 2px .5px rgba(0,0,0,0.5);
+}
+
 .mole{
     background-image: url('images/mole.jpg');
     background-size: cover;
-    background-position: center
-
+    background-position: center;
+    cursor: pointer;
 }
 
 .time, .result{
@@ -52,4 +61,21 @@ h1{
 
 .score, .time-left{
     font-weight: 400 
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.reset{
+    background-color: transparent;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+    border: solid 3px #fff;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 0 2px .9px rgba(0,0,0,0.3);
 }
