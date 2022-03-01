@@ -59,7 +59,7 @@ const flipCard = ({target}) => {
 const checkForMatch = () => {
     const cards = container.querySelectorAll('img')
     // the list of elements is syncronized with the array, so I can handle it this way
-    
+
     const [{id: chosen1, name: name1}, {id: chosen2, name: name2}] = chosenCards
     if(chosen1 === chosen2){
         cards[chosen1].setAttribute('src', `./images/blank.png`)
@@ -93,7 +93,7 @@ const checkForMatch = () => {
 const createRefresh = () => {
     const refresh = document.createElement('a')
     refresh.classList.add('refresh')
-    refresh.setAttribute('href', 'index.html')
+    refresh.setAttribute('href', './index.html')
     refresh.innerText = 'Refresh'
     total.append(refresh)
 }
