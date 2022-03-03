@@ -5,8 +5,8 @@ const $timeLeft = document.querySelector('.time-left')
 let count = 60;
 let score = 0;
 
-// references the id of the current mol. Used in whackMole
-let currentMoleId;
+// references the id of the current square where the mole is. Used in whackMole
+let currentSquareId;
 
 const countDown = () => {
     count--;
@@ -29,15 +29,15 @@ const showMole = () => {
     const targetSquare = $squares[Math.floor(Math.random() * 9)] 
     targetSquare.classList.add('mole')
 
-    currentMoleId = targetSquare.id
+    currentSquareId = targetSquare.id
 }; const moleTimer = setInterval(showMole, 500)
 
 // hits the mol and increase the score
 const whackMole = e => {
-    if(e.target.id !== currentMoleId) return
+    if(e.target.id !== currentSquareId) return
     score++;
     $score.textContent = score
-    currentMoleId = null
+    currentSquareId = null
 }; $squares.forEach(square => {
     square.addEventListener('mouseover', whackMole)
 })
