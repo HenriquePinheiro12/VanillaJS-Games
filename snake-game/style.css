@@ -59,6 +59,12 @@ h1{
 
 .grid .snake{
     background: steelblue;
+    
+}
+
+.grid .snake:last-child{
+    border-radius: 5px;
+    background-color: red;
 }
 
 .grid .apple{
