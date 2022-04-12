@@ -21,23 +21,21 @@ const renderBoard = () => {
 const $squares = renderBoard();
 
 const startGame = () => {
-    console.log(snake)
-
-
     snake.direction = 1;
     snake.speed = 1000
     snake.body = [13, 12, 11]
 
-    for(i of snake.body){
-        $squares[i].classList.add('snake')
-    }
+
+    $squares.forEach(sqr => sqr.classList.remove('snake'))
+    for(i of snake.body) $squares[i].classList.add('snake')
 
 
     setTimeout(move, snake.speed)
     setTimeout(generateApple, snake.speed * 1.5)
 }
 
-const move = () => {
+const move = () => {7
+    console.log(snake.speed)
     const {body, direction} = snake
 
     // check colision
@@ -62,7 +60,7 @@ const move = () => {
         $squares[body[0]].classList.remove('apple')
     }
     
-    setInterval(move, snake.speed)
+    setTimeout(move, snake.speed)
 }
 
 const generateApple = () => {

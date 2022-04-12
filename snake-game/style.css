@@ -8,7 +8,7 @@
 }
 
 main{
-    --bg-color: rgb(105, 44, 44);
+    --bg-color: rgb(73, 153, 73);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -58,13 +58,7 @@ h1{
 }
 
 .grid .snake{
-    background: steelblue;
-    
-}
-
-.grid .snake:last-child{
-    border-radius: 5px;
-    background-color: red;
+    background: sienna;   
 }
 
 .grid .apple{
